@@ -20,9 +20,9 @@
       justify-content: center; */
     }
     #grid{
-      /* display: flex;
-      align-items: center;
-      justify-content: center; */
+      display: grid;
+      justify-content: center;
+      align-content: center;
       background-color: brown; 
       width: 300px;
       color: white;
@@ -68,7 +68,7 @@
   <script src="hard.js"></script> 
   <script>
     var name = localStorage.getItem('userName')
-    document.getElementById('userName').innerText = "start playing "+(name)
+    document.getElementById('userName').innerText = "start playing "+(name)+"(X)"
   </script>
 </body>
 </html>
