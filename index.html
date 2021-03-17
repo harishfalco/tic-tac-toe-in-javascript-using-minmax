@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <style>
+         @import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Ravi+Prakash&display=swap');
+          body{
+              background-image: url('./bgimage.jpg');
+              background-size: cover;
+              background-repeat: no-repeat;
+              font-family: 'Ravi Prakash';
+              color: antiquewhite;
+          }
+          #main{
+              display: flex;
+              align-items: center;
+              justify-content: center; 
+          }
+          h1{
+              font-size: 70px;
+          }
+          label{
+            font-size: 25px;
+          }
+          input[type=text]{
+            padding: 10px;
+            outline: none;
+            font-family: 'Ravi Prakash';
+            background-color: black;
+            color: antiquewhite;
+            font-size: 20px;
+          }
+          input:focus{
+              outline: none;
+              background-color: black;
+          }
+          input[type=image]{
+              padding: 10px;
+          }
+      </style>
+      
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        /> 
+    </head>
+    <body>
+          
+           <h1 id="main">Tic tac toe</h1>
+           <br>
+            <label id="main" class="animate__animated animate__zoomInRight" >
+                Enter Player name
+            </label>
+            <br>
+            <div id="main" class="animate__animated animate__zoomInRight">
+                    <input 
+                    type="text" 
+                    placeholder="name"
+                    id="userName"
+                    autocomplete="additional-name"
+                    >
+                <a href="hard.html">
+                <input type="image" src="sendicon.png" alt="Submit" height="30px" width="30px" onclick="handleSubmit()"></a> 
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript">
+
+        function handleSubmit(){
+            var name = document.getElementById('userName').value;
+            !name? alert('enter a name'): localStorage.setItem('userName', name)
+        }
+    </script>
+</html>

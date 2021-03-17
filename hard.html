@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Tic Tac Toe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Ravi+Prakash&display=swap');
+    body{
+      font-family: 'Ravi Prakash';
+      background-color: #90ee90 ;
+    }
+    .header{
+      font-size: 30px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #grid{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* background-color: brown; */
+      width: 300px;
+      color: white;
+    }
+    #button{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: black;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+    <h3 id="userName" class="header"></h3>
+  <table id="grid">
+    <tr>
+      <td class="box" id="0"></td>
+      <td class="box" id="1"></td>
+      <td class="box" id="2"></td>
+    </tr>
+    <tr>
+      <td class="box" id="3"></td>
+      <td class="box" id="4"></td>
+      <td class="box" id="5"></td>
+    </tr>
+    <tr>
+      <td class="box" id="6"></td>
+      <td class="box" id="7"></td>
+      <td class="box" id="8"></td>
+    </tr>
+  </table>
+
+  <button onClick="StartGame()" id="button">
+    Replay
+  </button>
+
+  <div class="end-game">
+    <div class="text"></div>
+  </div>
+
+  <script src="hard.js"></script> 
+  <script>
+    var name = localStorage.getItem('userName')
+    document.getElementById('userName').innerText = "start playing "+(name)
+  </script>
+</body>
+</html>
